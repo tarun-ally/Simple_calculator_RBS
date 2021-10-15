@@ -1,0 +1,46 @@
+#main{
+    
+    /* background-color: aqua; */
+    width: 50%;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#showingNumber{
+    /* margin: ; */
+    align-self: center;
+    width:50%;
+    height: 30px;
+    /* background-color: palevioletred; */
+
+}
+#num{
+    width: 50%;
+    display: grid;
+    /* background-color: blue; */
+    margin: 10px auto 0 auto;
+    grid-template-columns: 1fr 1fr 1fr ;
+    /* flex-wrap: wrap; */
+}
+#equal{
+    /* background-color: yellow; */
+    width: 10%;
+    margin: 10px auto 0 auto;
+}
+#num button{
+    width: 90%;
+    
+    /* background-color: red; */
+}
+#answer{
+    font-size: 30px;
+    display: block;
+    align-self: center;
+    margin: 10px 0 10px 0;
+    /* margin-left: -290px; */
+    /* background-color: peru; */
+}
+#remove{
+    align-self: center;
+}
