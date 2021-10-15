@@ -2,9 +2,11 @@ var number = document.getElementById('num');
 var equal = document.getElementById('equal');
 var answer = document.getElementById('answer');
 var removeAnswer = document.getElementById('remove');
-var showingNumber =document.getElementById('showingNumber');
+var showingNumber = document.getElementById('showingNumber');
+var clearAll = document.getElementById('clearAll');
+// console.log(clearAll);
 
-let tag=0;
+let tag = 0;
 // showing answer
 equal.addEventListener('click', arthematic);
 
@@ -14,20 +16,24 @@ number.addEventListener('click', addElement);
 // removing answer node
 removeAnswer.addEventListener('click', deleteAnswer);
 
+// clear showing display and answer both
+clearAll.addEventListener('click', clearTextAndAnswer);
+
 
 var numb = '';
+
 function addElement(e) {
-    
-    if(tag==1){
+
+    if (tag == 1) {
         showingNumber.removeChild(showingNumber.childNodes[1]);
 
     }
-    tag=1;
+    tag = 1;
     numb += `${e.target.innerText}`;
     let line = document.createElement('li');
     showingNumber.appendChild(line.appendChild(document.createTextNode(numb)));
 
-    console.log(numb);
+    // console.log(numb);
 }
 
 function arthematic(e) {
@@ -50,36 +56,49 @@ function arthematic(e) {
 
     }
     var li = document.createElement('li');
-    let ans=currentValue;
-    if(add=='-'){
+    let ans = currentValue;
+    if (add == '-') {
         ans = previousValue - currentValue;
     }
-    if(add=='+'){
+    if (add == '+') {
         ans = previousValue + currentValue;
-        
+
     }
-    if(add=='*'){
+    if (add == '*') {
         ans = previousValue * currentValue;
-        
+
     }
-    if(add=='/'){
+    if (add == '/') {
         ans = previousValue / currentValue;
-        
+
     }
 
     answer.appendChild(li.appendChild(document.createTextNode(ans)));
-    currentValue=0;
-    previousValue=0;
-    add='';
-    // ans='';
-    numb='';
-    // answer.childNodes(`<li>${currentValue}</li>`);
-    console.log(currentValue, previousValue, add, ans, 'as');
+    currentValue = 0;
+    previousValue = 0;
+    add = '';
+    numb = '';
+    // console.log(currentValue, previousValue, add, ans, 'as');
 
 }
 
- function deleteAnswer(e){
+function deleteAnswer(e) {
 
     answer.removeChild(answer.childNodes[1]);
-    //  console.log();
- }
+}
+
+
+function clearTextAndAnswer() {
+    if (tag == 1) {
+        if (answer.childNodes.length > 1) {
+
+            answer.removeChild(answer.childNodes[1]);
+        }
+
+        showingNumber.removeChild(showingNumber.childNodes[1]);
+        numb = '';
+        console.log(showingNumber.childNodes.length);
+        tag = 0;
+    }
+
+}
