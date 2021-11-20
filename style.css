@@ -1,49 +1,133 @@
-#main{
-    
-    /* background-color: aqua; */
-    width: 50%;
-    margin: 40px auto 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#main {
+  background-color: #889e5c;
+  width: 50%;
+  margin: 40px auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  border-color: gray;
+  border-style: outset;
+  position: relative;
 }
-#showingNumber{
-    align-self: center;
-    width:50%;
-    height: 30px;
-    /* background-color: palevioletred; */
 
+#showingNumber {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  height: 30px;
+  background-color: #0ad825;
+  border-radius: 5px;
+  text-align: center;
+  padding-top: 10px;
+  border-color: gray;
+  border-style: outset;
 }
-#num{
-    width: 50%;
-    display: grid;
-    /* background-color: blue; */
-    margin: 10px auto 0 auto;
-    grid-template-columns: 1fr 1fr 1fr ;
-    /* flex-wrap: wrap; */
+
+#num {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  height: 50vh;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-row-align: center;
+      align-self: center;
+  /* flex-wrap: wrap; */
 }
-#equal{
-    /* background-color: yellow; */
-    width: 10%;
-    margin: 10px auto 0 auto;
+
+#num button {
+  width: 100%;
+  background-color: #188b0d;
 }
-#num button{
-    width: 90%;
-    
-    /* background-color: red; */
+
+#num button:hover {
+  background-color: #18ca07;
+  -webkit-box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: context-menu;
 }
-#answer{
-    font-size: 30px;
-    display: block;
-    align-self: center;
-    margin: 10px 0 10px 0;
+
+#equal {
+  background-color: #4227a5;
+  width: 50%;
+  height: 12.7vh;
+  margin: 10px auto 0 auto;
+  position: absolute;
+  top: 43.5vh;
+  right: 0;
 }
-#remove,
-#clearAll{
-    align-self: center;
-    margin-bottom: 10px;
-    background-color: aquamarine;
+
+#equal:hover {
+  background-color: #4015db;
+  -webkit-box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: context-menu;
 }
-#clearAll button{
-   font-size: larger;
+
+#answer {
+  width: 100%;
+  font-size: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: block;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin: 0px 0 0px -3px;
+  height: 10vh;
+  background-color: #e8ecec;
+  border-color: gray;
+  border-style: outset;
+  padding: 4% 0;
 }
+
+#remove {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#clear {
+  width: 30vw;
+  height: 10vh;
+  background-color: #067a7e;
+}
+
+#clear:hover {
+  background-color: #09b2b8;
+  -webkit-box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: context-menu;
+}
+
+#clearAll {
+  width: 30vw;
+  height: 10vh;
+  background-color: #067a7e;
+}
+
+#clearAll:hover {
+  background-color: #09b2b8;
+  -webkit-box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: context-menu;
+}
+
+#clearAll button {
+  height: 10vh;
+  font-size: larger;
+}
+/*# sourceMappingURL=style.css.map */

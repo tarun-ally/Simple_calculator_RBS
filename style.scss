@@ -1,0 +1,114 @@
+#main{
+    
+     background-color: rgb(136, 158, 92); 
+    width: 50%;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    border-color: gray;
+    border-style: outset;
+    position: relative;
+}
+#showingNumber{
+    align-self: center;
+    width:100%;
+    height: 30px;
+     background-color: rgb(10, 216, 37); 
+     border-radius: 5px;
+     text-align: center;
+     padding-top: 10px;
+     border-color: gray;
+     border-style: outset;
+     
+
+}
+#num{
+    width: 100%;
+    display: grid;
+    //  background-color: blue; 
+    // margin: 0px auto 0 auto;
+    height:50vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-self: center;
+     button{
+        width: 100%;
+        // align-self: center;
+         background-color: rgb(24, 139, 13); 
+         &:hover{
+            background-color: rgb(24, 202, 7); 
+            box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            cursor: context-menu;
+         }
+    }
+
+    /* flex-wrap: wrap; */
+}
+#equal{
+     background-color: rgb(66, 39, 165); 
+    width: 50%;
+    height: 12.7vh;
+    margin: 10px auto 0 auto;
+    position: absolute;
+    top: 43.5vh;
+    right: 0;
+    &:hover{
+        background-color: rgb(64, 21, 219); 
+        box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        cursor: context-menu;
+     }
+
+}
+
+#answer{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    align-self: flex-start;
+    margin: 0px 0 0px -3px;
+    height: 10vh;
+    background-color: rgb(232, 236, 236);
+    border-color: gray;
+    border-style: outset;
+    padding: 4% 0;
+    // padding: 10px auto;
+}
+
+#remove{
+    align-self: flex-start;
+    width: 100%;
+
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+
+}
+#clear {
+
+    width: 30vw;
+    height: 10vh;
+    background-color: rgb(6, 122, 126);
+    &:hover{
+        background-color: rgb(9, 178, 184); 
+        box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        cursor: context-menu;
+     }
+}
+#clearAll{
+    width: 30vw;
+    height: 10vh;
+    background-color: rgb(6, 122, 126);
+    &:hover{
+        background-color: rgb(9, 178, 184); 
+        box-shadow: rgba(201, 190, 41, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        cursor: context-menu;
+     }
+     button{
+         height: 10vh;
+        font-size: larger;
+     }
+
+}
+
